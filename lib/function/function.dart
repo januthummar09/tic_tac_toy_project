@@ -1,8 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toy_project/function/step_five.dart';
 import 'package:tic_tac_toy_project/function/step_four.dart';
 import 'package:tic_tac_toy_project/function/step_one.dart';
+import 'package:tic_tac_toy_project/function/step_six.dart';
 import 'package:tic_tac_toy_project/function/step_three.dart';
 import 'package:tic_tac_toy_project/function/step_two.dart';
 
@@ -13,8 +15,8 @@ T getRandomElement<T>(List<T> list) {
 }
 
 int getData() {
-  // var list = [0, 1, 2, 3, 5, 6, 7, 8];
-  var list = [5];
+  var list = [0, 1, 2, 3, 5, 6, 7, 8];
+  // var list = [5];
 
   var element = getRandomElement(list);
   print(element);
@@ -23,8 +25,8 @@ int getData() {
 }
 
 int zeroIndex() {
-  var list = [1, 2, 3, 4, 5, 6, 7, 8];
-  // var list = [4];
+  // var list = [1, 2, 3, 4, 5, 6, 7, 8];
+  var list = [5];
 
   var zeroElement = getRandomElement(list);
 
@@ -85,9 +87,11 @@ void fun(List<List<int>> data) {
     }
   }
   stepFour(data);
+  stepFive(data);
+  stepSix(data);
 
   // else if(data[0][0] == 0 && data[1][0] == -1 && data[2][0] == -1 && data[0][1] == -1 && data[1][1] == 1 && data[2][1] == -1 && data[0][2] == -1 && data[1][2] == -1 && data[2][2] == 0)
   // 0 -1 -1
-  // 0 1 -1
-  // -1 1 0
+  // -1 -1 1
+  // -1 -1 -1
 }
